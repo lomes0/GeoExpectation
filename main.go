@@ -16,7 +16,7 @@ type Flip struct {
 
 func flip() Flip {
 
-	if rand.Intn(4) == 0 {
+	if rand.Intn(2) == 0 {
 		return Flip{0}
 	}
 	return Flip{1}
@@ -37,7 +37,7 @@ func toss_until() uint32 {
 
 func main() {
 
-	const rounds = 9000000
+	const rounds = 100
 	var results = make([]uint32, rounds)
 
 	for i := 0; i < rounds; i++ {
